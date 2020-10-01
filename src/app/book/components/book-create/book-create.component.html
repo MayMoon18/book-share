@@ -1,0 +1,45 @@
+<app-flat-icon [pathUrl]="'/'" [icon]="'x'"></app-flat-icon>
+
+<form class="form-container">
+  <div class="form-group">
+		<h1>Add New Book</h1>
+		<input
+		[(ngModel)]="name"
+		type="text" 
+		class="form-control" 
+		id="name"
+		name="name"
+		placeholder="Add name">
+  </div>
+  <div class="form-group">
+		<input
+		[(ngModel)]="author"
+		type="text" 
+		class="form-control" 
+		id="author"
+		name="author"
+		placeholder="Add author">
+	</div>
+	<div class="form-group">
+		<input
+		[(ngModel)]="imageUrl"
+		type="text" 
+		class="form-control" 
+		id="link"
+		name="imageUrl"
+		placeholder="Add url image">
+	</div>
+	<div class="form-group">
+		<textarea
+		[(ngModel)]="description"
+		class="form-control" 
+		rows="3" 
+		id="description"
+		name="description"
+		placeholder="Add description"></textarea>
+	</div>
+	<button 
+	type="submit" 
+	class="btn btn-dark" 
+	(click)="onSubmit()">Add new book</button>
+</form>

@@ -1,0 +1,16 @@
+<app-flat-icon [icon]="'+'" [pathUrl]="'/create'"></app-flat-icon>
+
+<div class="list-container">
+	<div *ngIf="bookList.length" class="container">
+		<div class="row">
+			<div *ngFor="let book of bookList" class="col-sm">
+				<app-card 
+					[name]="book.name" 
+					[author]="book.author" 
+					[imageUrl]="book.imageUrl" 
+					[description]="book.description"
+				></app-card>
+			</div>
+		</div>
+	</div>
+</div>
